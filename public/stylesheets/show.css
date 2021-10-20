@@ -1,0 +1,6 @@
+.card, .list-group-item {
+    background-color: black;
+}
+.card, .card-body, .list-group-item, .form-label, h2 {
+    color: white;
+}

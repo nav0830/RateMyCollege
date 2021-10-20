@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center text-white">New College</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/colleges" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label text-white" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="college[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label text-white" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="college[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="college[image]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label text-white" for="ctc">Avg CTC per Annum (in LPA)</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="ctc-label">&#8377;</span>
+                    <input type="text" class="form-control" id="ctc" placeholder="0.00" aria-label="ctc"
+                        aria-describedby="ctc-label" name="college[ctc]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="college[description]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label text-white">Add Image(s)</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add College</button>
+            </div>
+        </form>
+        <a href="/colleges" class="btn btn-secondary font-weight-bold border-dark bg-dark text-white">All Colleges</a>
+    </div>
+</div>
