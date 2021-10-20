@@ -6,7 +6,7 @@ const { cloudinary } = require("../cloudinary");
 
 
 module.exports.index = async (req, res) => {
-    const colleges = await College.find({}).populate('popupText');
+    const colleges = await College.find({}).populate('author');
     res.render('colleges/index', { colleges })
 }
 
